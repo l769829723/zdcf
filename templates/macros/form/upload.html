@@ -1,0 +1,11 @@
+{% macro upload_form() %}
+<form class="pure-form" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <legend>请上传报表文件：</legend>
+    <input type="file" name="assets" accept=".xls,.xlsx" required />
+    <button type="submit" class="pure-button pure-button-primary">
+      开始拆分
+    </button>
+  </fieldset>
+</form>
+{% endmacro %}

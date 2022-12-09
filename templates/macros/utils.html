@@ -1,0 +1,5 @@
+{% macro set_page(title) %} {% block title %} {% if not title %}
+<title>报表拆分</title>
+{% else %}
+<title>{{ title }} | 报表拆分</title>
+{% endif %} {% endblock %} {% endmacro %}

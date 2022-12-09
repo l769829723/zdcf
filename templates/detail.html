@@ -1,0 +1,14 @@
+{% extends '_base.html' %} {% block content %}
+<div>
+  {% if message %}
+  <div>处理时遇到故障：{{ message }}</div>
+  {% else %} {% if progress < 100 %}
+  <div>正在处理中，进度： {{ progress }}%</div>
+  {% else %}
+  <div>
+    处理完成: 点击 [<a href="/download/{{ job }}" target="_blank">链接</a>]
+    下载文件.
+  </div>
+  {% endif %} {% endif %}
+</div>
+{% endblock %}
